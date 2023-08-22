@@ -1,0 +1,34 @@
+
+
+  <div class="container" >
+    <p class="text-center h2 mb-3">Teacher List
+    </p>
+      <table class="table table-hover">
+        <thead>
+          <tr> 
+            <th>#SR</th>          
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Department</th>
+            <th>Email ID</th>          
+            <th>Mobile no</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let teacher of TeacherList; let i = index ">
+    
+            <td>{{i + 1}}</td>
+            <td> {{ teacher.firstName}}</td>
+            <td> {{ teacher.lastName }}</td>
+            <td>{{teacher.department}}</td>
+            <td> {{ teacher.semail }}</td>      
+            <td> {{ teacher.contactNo }}</td>
+            <td>
+              <button class="btn btn-danger" (click)="onDelete(teacher.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>

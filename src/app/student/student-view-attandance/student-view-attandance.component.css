@@ -1,0 +1,28 @@
+table {
+  border-collapse: collapse;
+
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid black;
+
+  padding: 8px;
+
+  text-align: left;
+}
+
+th {
+  background-color: #ccc;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+}
+
+#Logout {
+  float: right;
+
+  margin-top: 1%;
+}

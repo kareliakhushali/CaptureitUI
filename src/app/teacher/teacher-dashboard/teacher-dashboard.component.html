@@ -1,0 +1,70 @@
+ <!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+
+  <title>Dashboard Page</title>
+
+
+</head>
+
+<body>
+
+  <div ng-controller="dashboardController" class="container">
+    <div class="fw-bold text-black ">   
+      <p class="text-center h2">Teacher Dashboard
+      </p>
+    </div>    
+     <div class="row mt-4">
+
+      <div class="col-md-3">
+
+        <div class="card">
+            <div style="text-align: center;  margin-top: 3%;">
+                <img src="assets/i3.png" style="height:130px; width:50%;" >
+            </div>
+
+
+          <div class="card-body" >
+
+            <h5 class="card-title">Capture Attandance</h5>
+
+            <p class="card-text">Click here to capture the students for attandence.</p>
+
+            <button class="btn btn-primary"  [routerLink] = "['/capture']" (click)="onclick()">Capture</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-3">
+
+        <div class="card">
+            <div style="text-align: center; margin-top: 3%;">
+
+          <img src="assets/attandance.png" style="height:130px; width:50%;"  >
+
+          </div>
+          <div class="card-body">
+
+            <h5 class="card-title">View Attandence</h5>
+
+            <p class="card-text">Click the button below to view attendance sheet of students.</p>
+
+            <a class="btn btn-primary" [routerLink] = "['/teacher-view-attandence']"  >Attendance</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
+

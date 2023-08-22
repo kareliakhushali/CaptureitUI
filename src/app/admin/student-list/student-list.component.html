@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="container">
+      <p class="text-center h2 mb-3">Student List</p>
+      
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#SR</th>
+            <th scope="col">Roll No</th>
+            <th >First Name</th>
+            <th>Last Name</th>
+            <th>Semester</th>
+            <th>Department</th> 
+            <th>Parent's Contact</th>         
+            <th>Parent's Email</th>
+            <th>Student's Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of StudentList; let i =index;"> 
+            <td>{{ i+ 1}}</td>   
+            <td>{{ s.rollNo}}</td>
+            <td> {{ s.firstName }}</td>
+            <td> {{ s.lastName }}</td>
+            <td> {{ s.class }}</td>
+            <td> {{ s.department }}</td> 
+            <td> {{ s.pmobileno }}</td>
+            <td> {{ s.pemail}}</td>
+            <td> {{ s.semail }}</td>        
+          <td>
+              <!-- <button class="btn btn-info" (click)="onEdit(student.id)">Edit</button> &nbsp;     -->
+              <button class="btn btn-danger" (click)="onDelete(s.rollNo)" >Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+

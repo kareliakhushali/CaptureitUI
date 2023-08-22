@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>View Attendance</title>
+
+    <link rel="stylesheet" href="student-view-attandance.component.css">
+
+  </head>
+
+  <body>
+
+    <div ng-app="attendanceApp" *ngFor="let s of studentList;">
+
+      <div ng-controller="attendanceController">
+
+        <h1 class="text-center">Attendance Report</h1>
+
+        <table style="width: 90%; margin-left: 5%;" >
+
+          <thead>
+
+            <tr>
+
+              <th>Name</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <tr ng-repeat="student in students">
+
+              <td>
+
+              {{ s.firstName +' '+ s.lastName}}
+
+            </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+        <p class="text-center mt-3">Attendance Percentage: {{ s.attendance}}%</p>
+
+        <!-- {{attendancePercentage()}} -->
+
+       
+
+      </div>
+
+    </div>
+
+    <!-- <script>  
+
+    var app = angular.module('attendanceApp', []);
+
+    app.controller('attendanceController', function($scope) {
+
+  $scope.students = [
+
+    { name: 'Jay Shah', present: false },
+
+    { name: 'Virat Kohli', present: true },
+
+    { name: 'KL Rahul', present: true },
+
+  ];
+
+  $scope.updateAttendance = function() {
+
+    // Do something when attendance is updated
+
+  };
+
+
+
+  $scope.attendancePercentage = function() {
+
+    var presentCount = 0;
+
+    for (var i = 0; i < $scope.students.length; i++) {
+
+      if ($scope.students[i].present) {
+
+        presentCount++;
+
+      }
+
+    }
+
+    return presentCount / $scope.students.length * 100;
+
+  };
+
+});
+
+  </script> -->
+
+  </body>
+
+</html>

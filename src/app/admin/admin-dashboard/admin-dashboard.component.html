@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="fw-bold text-black ">   
+    <p class="text-center h2">Admin Dashboard
+    </p>
+  </div>
+  <br>  
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <img src ="assets/Student.jpg" style="height: 120px;">
+          <h5 class="card-title">Add Student <i class="fas fa-plus-circle f-left"></i></h5>   
+          <p class="card-text">Click the below button to register the student</p>
+
+            <a  class="col-sm-6 btn btn-primary" [routerLink]="'/admin-add-student'">Add Student</a>
+            <a  class="mt-1 btn btn-primary" [routerLink]="'/student-list'">View Student</a>
+
+         
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <img id="teacher" src ="assets/at.png" style="height: 120px;" >
+          <h5 class="card-title">Add Teacher <i class="fas fa-plus-circle f-left"></i></h5>
+          <p class="card-text">Click the below button to register the teacher</p>
+
+            <a class=" btn btn-primary" [routerLink]="'/admin-add-teacher'">Add Teacher</a>
+            <a  class="mt-1 btn btn-primary"[routerLink]="'/teacher-list'">View Teacher</a>
+
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body" style="height:327px;">
+          <img id="teacher" src ="assets/message.png" style="height:120px;" >
+          <h5 class="card-title mt-2">Generate Email Notification</h5>
+          <p class="card-text">Click the below button to notify the student's parent.</p>
+          <a href="#" class="btn btn-primary" [routerLink]="'/adminenotify'">Generate</a>
+        </div>
+      </div>
+    </div> -->
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body" style="height:327px;">
+          <img id="teacher" src ="assets/report.png" style="height:120px;" >
+          <h5 class="card-title mt-2">Generate Report</h5>
+          <p class="card-text mt-4">Click the below button to generate the report</p>
+          <a class="btn btn-primary mt-3" [routerLink]="'/attendence-report'">Generate Report</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 

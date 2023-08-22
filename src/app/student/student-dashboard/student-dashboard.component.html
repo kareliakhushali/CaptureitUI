@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <title>Dashboard Page</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="fw-bold text-black ">
+      <p class="text-center h2">Student Dashboard
+      </p>
+    </div>
+
+    <div class="row mt-4">
+
+      <div class="col-md-3">
+
+        <div class="card">
+
+          <img src="assets/updateProfile.png" alt="Loading..">
+
+          <div class="card-body">
+
+            <h5 class="card-title">Upload Profile</h5>
+
+            <p class="card-text">Click the button below to Upload your profile
+              information.</p>
+
+            <button class="btn btn-primary" [routerLink]="'/student-data'">Upload
+              Profile</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-3">
+
+        <div class="card">
+
+          <img src="assets/attandance.png" alt="Loading..">
+
+          <div class="card-body">
+
+            <h5 class="card-title">View Attendance</h5>
+
+            <p class="card-text">Click the button below to view your
+              attendance records.</p>
+
+            <button class="btn btn-primary" [routerLink]="'/view-attendance'">View Attendance</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

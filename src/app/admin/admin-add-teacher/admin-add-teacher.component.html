@@ -1,0 +1,75 @@
+<div class="container">
+  <div id="card" class="card align-content-center mt-0" style="width: 45%; height: 20%; " >
+    <div class = "shadow p-2  bg-white rounded">
+      <div class="container">     
+         <div class="row">     
+           <div class="col-sm-8 offset-sm-2">       
+             <div>
+              <h4 class="text-center">Add Teacher</h4>
+               <form #addteacher="ngForm" (ngSubmit)="createTeacher()"novalidate>
+                <!-- <h1 class="text-center">Add Teacher</h1> -->
+               
+                 <div class="form-group">
+                   
+       
+                   <label for="firstname" class="mt-2">First Name</label>
+                   <input [(ngModel)]="teacher.firstname" type="text" name="firstname" class="form-control" id="firstname" aria-describedby="nameHelp" placeholder="Enter firstname" required minlength="2" maxlength="30">
+                   <div *ngIf="addteacher.controls['firstname'].invalid && (addteacher.controls['firstname'].dirty || addteacher.controls['firstname'].touched)" class="alert alert-danger">
+                    <div *ngIf="addteacher.controls['firstname'].errors?.['required']">First name is required.</div>
+                    <div *ngIf="addteacher.controls['firstname'].errors?.['minlength']">First name should be at least 2 characters long.</div>
+                    <div *ngIf="addteacher.controls['firstname'].errors?.['maxlength']">First name should not exceed 30 characters.</div>
+                  </div>
+
+     
+                   <label for="lastname" class="mt-2">Last Name</label>
+                   <input [(ngModel)]="teacher.lastname" type="text" name="lastname" class="form-control" id="lastname" aria-describedby="nameHelp" placeholder="Enter lastname" required minlength="2" maxlength="30">
+                   <div *ngIf="addteacher.controls['lastname'].invalid && (addteacher.controls['lastname'].dirty || addteacher.controls['lastname'].touched)" class="alert alert-danger">
+                    <div *ngIf="addteacher.controls['lastname'].errors?.['required']">Last name is required.</div>
+                    <div *ngIf="addteacher.controls['lastname'].errors?.['minlength']">Last name should be at least 2 characters long.</div>
+                    <div *ngIf="addteacher.controls['lastname'].errors?.['maxlength']">Last name should not exceed 30 characters.</div>
+                  </div>
+
+                  <label for="department">Choose the Department:</label>
+
+                  <select name="department" id="department" class="m-1 mb-4 " [(ngModel)]="teacher.department">
+                    <option value="B-Tech">B-Tech</option>
+                    <option value="M-Tech">M-Tech</option>
+                    <option value="MCA">MCA</option>
+                    <option value="BCA">BCA</option>
+                  </select>
+              
+     
+                   <label for="contactNo" class="mt-2"> Contact No</label>
+                   <input [(ngModel)]="teacher.contactNo" type="text" name="contactNo" class="form-control" id="contactNo" aria-describedby="nameHelp" placeholder="Enter the contact no" required minlength="10" maxlength="10" pattern="[0-9]+">
+                   <div *ngIf="addteacher.controls['contactNo'].invalid && (addteacher.controls['contactNo'].dirty || addteacher.controls['contactNo'].touched)" class="alert alert-danger">
+                    <div *ngIf="addteacher.controls['contactNo'].errors?.['required']"> Contact No is required.</div>
+                    <div *ngIf="addteacher.controls['contactNo'].errors?.['minlength']"> contact no must be at least 10 digits long</div>
+                    <div *ngIf="addteacher.controls['contactNo'].errors?.['maxlength']">contact no cannot be longer than 10 digits</div>
+                    <div *ngIf="addteacher.controls['contactNo'].errors?.['pattern']"> contact no must contain only numbers</div>
+             
+                  </div>
+      
+                   <label for="semail" class="mt-2"> Email</label>
+                   <input [(ngModel)]="teacher.semail" type="text" name="semail" class="form-control" id="semail" aria-describedby="emailHelp"
+                     placeholder="Enter your email" required>
+                     <div *ngIf="addteacher.controls['semail'].invalid && (addteacher.controls['semail'].dirty || addteacher.controls['semail'].touched)" class="alert alert-danger">
+                      Email is required.
+                      </div>
+                      
+                  
+       
+                 </div>
+                 <div class="text-center">
+
+                   <button class="btn btn-success mb-2 mt-2"  (click)="createTeacher()" [disabled]="!addteacher.valid">Add Teacher</button>
+                  </div>
+
+               </form>
+      
+             </div>
+           </div>
+         </div>
+       
+         </div> 
+        </div>
+  </div>

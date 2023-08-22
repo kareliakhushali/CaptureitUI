@@ -1,0 +1,23 @@
+img{
+
+    height: 130px;
+
+    width: 50%;
+
+    margin-left: 25%;
+
+    margin-top: 5%;
+
+}
+
+#Logout{
+
+    float: right;
+
+    margin-top: 8px;
+
+    /* background-color: red; */
+
+    color: white;
+
+}

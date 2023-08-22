@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+
+<html lang="en" ng-app="myApp">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Student Data</title>
+
+    <script
+
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <link rel="stylesheet" href="student-data.component.css">
+
+      <script src="student-data.component.ts"></script>
+
+</head>
+
+    <body ng-controller="myCtrl">
+
+        <div class="shadow container mt-5 rounded">
+
+            <h2>Upload Profile</h2>
+
+            <form>
+
+                <div *ngFor="let s of studentList;">
+
+                    <div class="form-group">  
+
+                        <label for="name">Full Name:</label>  
+
+                        <input type="text" class="form-control" id="name" ng-model="name" value= "{{ s.firstName +' '+ s.lastName}}"
+
+                        disabled>  
+
+                     </div>  
+
+                    <div class="form-group">  
+
+                         <label for="parentmobile">Parent Mobile Number:</label>  
+
+                        <input type="text" class="form-control" id="parentmobile"
+
+                            ng-model="parentMobile"  value="{{ s.pmobileno }}"
+
+                            disabled>  
+
+                    </div>  
+
+                    <div class="form-group">  
+
+                        <label for="parentemail">Parent Email ID:</label>  
+
+                        <input type="email" class="form-control" id="parentemail"
+
+                            ng-model="parentEmail"  value="{{ s.pemail}}"
+
+                            disabled>  
+
+                    </div>  
+
+                    <div class="form-group row">  
+
+                        <label class="col-3">Upload Image:</label>
+
+                        <button id="update" type="submit" class="btn btn-close-white col-2 " [routerLink]="'/upload-profile'">Upload</button>
+
+                    </div>  
+
+                </div>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>

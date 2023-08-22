@@ -1,0 +1,317 @@
+
+
+<html>
+
+
+
+
+  <body>
+
+
+
+
+    <div class="container">
+
+
+
+
+      <div class="container">
+
+
+
+
+        <p class="text-center h2 mb-3" [routerLink]="'/teacher-dashboard'">Attendance Report</p>
+
+
+
+
+
+
+        <!-- <div style="text-align: center">
+
+
+
+
+          <p>Choose the department to view attendence.</p>
+
+
+
+
+
+
+          <div class="dropdown" style="text-align: center">
+
+
+
+
+            <button class="dropbtn">Departments</button>
+
+
+
+
+
+
+            <div class="dropdown-content">
+
+
+
+
+              <a (click)="onbtech()">B-Tech</a>
+
+
+
+
+
+
+              <a (click)="onmtech()">M-Tech</a>
+
+
+
+
+
+
+              <a (click)="onmca()">MCA</a>
+
+
+
+
+
+
+              <a (click)="onbca()">BCA</a>
+
+
+
+
+            </div>
+
+
+
+
+          </div>
+
+
+
+
+        </div> -->
+
+
+
+
+
+
+        <div>
+
+
+
+
+          <table class="table table-hover mt-4">
+
+
+
+
+            <thead>
+
+
+
+
+              <tr>
+
+
+
+
+                <th>#SR</th>
+
+
+
+
+                <th scope="col">Roll No</th>
+
+
+
+
+
+
+                <th>First Name</th>
+
+
+
+
+
+
+                <th>Last Name</th>
+
+
+
+
+
+
+                <th>Semester</th>
+
+
+
+
+
+
+                <th>Attendence</th>
+
+
+
+
+
+
+                <th>Student's Email</th>
+
+
+
+
+              </tr>
+
+
+
+
+            </thead>
+
+
+
+
+
+
+            <tbody>
+
+
+
+
+              <tr *ngFor="let student of StudentList; let i = index" [class.table-danger]=" student.attendance <= 20">
+
+
+
+
+                <td>{{ i + 1 }}</td>
+
+
+
+
+
+
+                <td>{{ student.studentRollNo }}</td>
+
+
+
+
+
+
+                <td>{{ student.studentName
+
+
+
+
+                }}</td>
+
+
+
+
+
+
+                <td>{{ student.studentLname }}</td>
+
+
+
+
+
+
+                <td>{{ student.studentClass }}</td>
+
+
+
+
+
+
+                <td>{{student.attendance}}%</td>
+
+
+
+
+
+
+                <td>{{ student.studentEmail }}</td>
+
+
+
+
+
+
+                <td>
+
+
+
+
+                  <!-- <button class="btn btn-info" (click)="onEdit(student.id)">Edit</button> &nbsp;     -->
+
+
+
+
+
+
+                  <!-- <button class="btn btn-danger" (click)="onDelete(student.id)" >Delete</button>
+
+
+
+
+
+
+            </td>
+
+
+
+
+
+
+          </tr> -->
+
+
+
+
+                </td>
+
+
+
+
+              </tr>
+
+
+
+
+            </tbody>
+
+
+
+
+          </table>
+
+
+
+
+        </div>
+
+
+
+
+      </div>
+
+
+
+
+    </div>
+
+
+
+
+  </body>
+
+
+
+
+</html>
+
+
+

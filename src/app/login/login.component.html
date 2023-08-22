@@ -1,0 +1,46 @@
+<html>
+    <body>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="./assets/logo.png" alt="">
+            </div>
+            <div class="text-center mt-4 name">
+                Capture It
+            </div>
+            <form class="p-3 mt-3" [formGroup]="loginForm">
+                <div class="form-field d-flex align-items-center">
+                    <span class="far fa-user"></span>
+                    <input type="Email" name="Email" id="Email"
+                        placeholder="Email Id" [formControl]="Email" required>
+                </div>
+                <div *ngIf="loginForm.controls['Email'].invalid &&
+                    (loginForm.controls['Email'].dirty ||
+                    loginForm.controls['Email'].touched)" class="text-danger">
+                    <div
+                        *ngIf="loginForm.controls['Email'].errors?.['required']">Email
+                        is required</div>
+                    <div *ngIf="loginForm.controls['Email'].errors?.['Email']">Invalid
+                        email format</div>
+                </div>
+                <div class="form-field d-flex align-items-center">
+                    <span class="fas fa-key"></span>
+                    <input type="password" name="password" id="password"
+                        placeholder="Password" [formControl]="password" required
+                        minlength="9">
+                </div>
+                <div *ngIf="loginForm.controls['password'].invalid &&
+                    (loginForm.controls['password'].dirty ||
+                    loginForm.controls['password'].touched)"
+                    class="text-danger">
+                    <div
+                        *ngIf="loginForm.controls['password'].errors?.['required']">Password
+                        is required</div>
+                    <div
+                        *ngIf="loginForm.controls['password'].errors?.['minlength']">Minimum
+                        9 character</div>
+                </div>
+                <button class="btn mt-3" (click)="login()">Login</button>
+            </form>
+        </div>
+    </body>
+</html>
